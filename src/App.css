@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+  margin: 0%;
+padding: 0%;
+text-transform: capitalize;
+font-family: 'Roboto', sans-serif;
+
+
+overflow: hidden;
+}
+.App{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: whitesmoke;
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.appBody{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+    width: 420px/* 1280px */;
+    background: #ffff;
+    height: calc( 100vh -60px);
+    border-radius: 20px;
+    box-shadow: -2px 4px 90px 1px rgba(128, 128, 128, 0.548);
+    
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todos{
+  
+  max-height: 60vh;
+  min-height: 300px;
+  transition: all 1s;
+  overflow-y: scroll;
+}
+.listBody{
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+}
+.todoCheckBox{
+  height: 30px;
+  width: 30px;
+  transition: all 1s;
+}
+.todoCheckBox:hover{
+  height: 40px;
+  width: 40px;
+  color: #2ce345;
+  cursor: pointer;
+}
+.todoCheckedBox{
+  height: 40px;
+  width: 40px;
+  color: #2ce345;
+  cursor: pointer;
+  transition: all 1s;
+
+}
+.todoCheckedBox:hover{
+  height: 40px;
+  width: 40px;
+  color: #e32c2c;
+  cursor: pointer;
+}
+
+.todo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: aliceblue;
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.todo>p{
+  width: 230px;
+}
+.todoDeleteIcon{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  height: 25px;
+  width: 25px;
+  transition: all 1s;
+}
+.todoDeleteIcon:hover{
+  color: #f95c5c;
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
 }
 
-.App-link {
-  color: #61dafb;
+
+hr.horizontal {
+  margin: 20px;
+  border-top: 2px solid #1e1f2a;
+  border-radius: 500px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 80%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input{
+  height: 30px;
+  max-width: 200px;
+  width: 100%;
+  border: 3px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 17;
+  font-weight: bold;
+
+  letter-spacing: 1px;
 }
+
+.sendIcon{
+  height: 25px;
+  width: 25px;
+  transition: all 1s;
+  background-color: aqua;
+  border-radius: 99999px;
+  padding: 10px;
+  color: azure;
+  margin-right: -50px;
+}
+.sendIcon:hover{
+  height: 15px;
+  width: 15px;
+  transition: all 1s;
+  background-color: greenyellow;
+  border-radius: 99999px;
+  padding: 10px;
+}
+
+.inputSection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  width: 400px;
+  overflow-x: auto;
+}
+
+.inputBodySection{
+ color: #2ce345;
+  text-align: center;
+  height: 120px;
+  margin-top: 20px;
+}
+
